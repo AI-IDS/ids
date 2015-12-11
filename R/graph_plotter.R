@@ -25,12 +25,12 @@ configure <- function(day = 14) {
   
   # Histogram png
   regr_png_prefix <- "results/"
-  regr_png_suffix <- "_hist.png"
+  regr_png_suffix <- "_regr.png"
   c$regr_png_file <- paste0(regr_png_prefix, day, regr_png_suffix)
   
   # Regression png
   hist_png_prefix <- "results/"
-  hist_png_suffix <- "_regr.png"
+  hist_png_suffix <- "_hist.png"
   c$hist_png_file <-
     paste0(hist_png_prefix, day, hist_png_suffix)
   
