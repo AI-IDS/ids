@@ -111,7 +111,7 @@ load_csv <- function(fname, time_offset = 18000) {
   }
   
   # Remove unlabeled samples
-  csv <- subset(csv,!(csv$label %in% c("miss", "null")))
+  #csv <- subset(csv,!(csv$label %in% c("miss", "null")))
   
   # Transform data
   names(csv)[names(csv)=="end_time"] <- "time"
@@ -122,7 +122,7 @@ load_csv <- function(fname, time_offset = 18000) {
     csv$swapped <- (csv$swapped == "true")
   
   if (!is.na(csv[1,]$label))
-    csv$assigned <- (!csv$label %in% c("miss", "null"))
+    csv$assigned <- (!(csv$label %in% c("miss", "null")))
   
   # Remove NA columns (if values are missing e.g. data not labeled)
   rem <- c()
